@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TJP: The Japa Project</title>
+        <style>
+            #head{
+                width: 1340px;
+                height: 300px;
+                background: linear-gradient(to right, darkcyan, black 70%, #000033 30%);
+                border-radius: 10px;
+            }
+            #heading{
+                color: aqua;
+                font-size: 60px;
+                margin-top: 40px;
+                margin-left: 150px;
+                position: absolute;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            #info{
+                color: orange;
+                position: absolute;
+                margin-top: 200px;
+                margin-left: 150px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            #body{
+                background-color: #001111;
+                border-radius: 10px;
+                width: 1340px;
+                height: 1100px;
+            }
+            #main-section{
+                margin-top: 50px;
+                margin-left: 200px;
+                width: 940px;
+                height: 670px;
+                border-radius: 10px;
+                background-color: lime;
+            }
+            p{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            #instruction{
+                padding-top: 30px;
+                padding-left: 250px;
+            }
+            form{
+                margin-left: 300px;
+            }
+            input{
+                height: 30px;
+                width: 240px;
+                border-radius: 10px;
+                text-align: center;
+                border-color: white;
+                margin-bottom: 20px;
+                border-style: solid;
+                box-shadow: 2px 2px 2px black;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            select{
+                width: 240px;
+                height: 30px;
+                margin-left: 300px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+            }
+            #note{
+                margin-left: 250px;
+            }
+            #start{
+                height: 30px;
+                width: 200px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                border-radius: 5px;
+                box-shadow: 2px 2px 2px black;
+                border-style: solid;
+                border-color: white;
+                margin-left: 320px;
+            }
+            #link{
+                display: none;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                text-decoration: none;
+                color: black;
+                background-color: white;
+                border-radius: 5px;
+                box-shadow: 2px 2px 2px black;
+                width: 200px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                margin-left: 320px;
+                margin-top: 50px;
+            }
+        </style>
+        <script>
+            function start(){
+                var name = document.getElementById('name');
+                if (name.value == "") {
+                    alert("Enter name !!!");
+                } else {
+                    var age = document.getElementById('age');
+                    if (age.value == 0) {
+                        alert("Enter age !!!");
+                    } else {
+                        var height = document.getElementById('height');
+                        if (height.value == 0) {
+                            alert("Enter Height !!!")
+                        } else {
+                            var weight = document.getElementById('weight');
+                            if (weight.value == 0) {
+                                alert("Enter Weight !!!");
+                            } else {
+                                var country = document.getElementById('country');
+                                if (country.value == "Select Country of Choice") {
+                                    alert("Pick Country of Your Choice !!!");
+                                } else {
+                                    var transit = document.getElementById('transit-type');
+                                    if (transit.value == "Select Transit type") {
+                                        alert("select transit type !!!");
+                                    } else {
+                                        var next = document.getElementById("link");
+                                        alert("process completed !!!\nstart Transfer");
+                                        next.style.display = "block";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="body">
+            <div id="head">
+                <h1 id="heading">TJP: The Japa Project</h1>
+                <p id="info">The fastest way to get out of your country.<br> With our newly developed cutting - edge
+                    technology, JRFYL innovation.</p>
+            </div>
+            <div id="main-section">
+                <p id="instruction">Kindly Fill the form below to initiate the process.</p>
+                <form id="form" name="form">
+                    <input type="text" id="name" name="name" placeholder="Enter name">
+                    <br>
+                    <input type="number" id="age" name="age" placeholder="Enter age">
+                    <br>
+                    <input type="number" id="height" name="height" placeholder="Enter height in cm">
+                    <br>
+                    <input type="number" id="weight" name="weight" placeholder="Enter weight in kilos">
+                    <br>
+                </form>
+                <select id="country">
+                    <option>Select Country of Choice</option>
+                    <option>South Africa</option>
+                    <option>Gabon</option>
+                    <option>Indonesia</option>
+                    <option>Australia</option>
+                    <option>San Marino</option>
+                    <option>Cuba</option>
+                    <option>Columbia</option>
+                    <option>Chad</option>
+                    <option>Liberia</option>
+                    <option>North Korea</option>
+                    <option>Yemen</option>
+                    <option>Madagascar</option>
+                    <option>Iraq</option>
+                    <option>Hungary</option>
+                </select>
+                <br>
+                <select id="transit-type">
+                    <option>Select Transit type</option>
+                    <option>Economy</option>
+                    <option>Business</option>
+                    <option>First Class</option>
+                </select>
+                <p id="note">Note: the Transit type doesn't affect Transit experience in anyway,<br>
+                It's just there to make us seem professional. Although we<br> might make it functional
+            in a future update.</p>
+                <button id="start" onclick="start()">Start Process</button>
+                <a href="transfer.html" id="link">start Transfer</a>
+            </div>
+        </div>
+    </body>
+</html>
